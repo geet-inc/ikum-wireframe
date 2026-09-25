@@ -81,7 +81,8 @@
   .sublist li span:last-child { color: var(--text-sub); }
 
   /* 法人 */
-  .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .corp .lead { max-width: none; }
   .corp-list li { padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
   .corp-list li:last-child { border-bottom: 1px solid var(--border); }
   .corp-list { margin: 8px 0 28px; }
@@ -96,8 +97,8 @@
   .card h3 { font-size: 15px; margin-bottom: 4px; }
 
   /* 採用 */
-  .recruit { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-  .recruit p { margin: 0; }
+  .recruit { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .recruit .lead { max-width: none; margin-bottom: 28px; }
 
   /* CTA */
   .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
@@ -204,11 +205,10 @@
 <!-- 4. 法人のみなさまへ -->
 <section style="padding-top:0;">
   <div class="container corp">
+    <div class="ph ph-4x3"><i class="fa-regular fa-image"></i><span>写真（法人向け）</span></div>
     <div>
       <h2>法人のみなさまへ</h2>
       <p class="lead">骨格から身体を整えるメソッドと、1万人以上の女性と向き合ってきた知見を、企業や施設のみなさまにもお届けしています。</p>
-    </div>
-    <div>
       <ul class="corp-list">
         <li>レッスンの監修</li>
         <li>法人向けのレッスン提供</li>
@@ -273,10 +273,11 @@
   <div class="container">
     <div class="recruit">
       <div>
-        <h3>採用情報</h3>
-        <p class="muted small">「ご機嫌」の想いに共感してくださるトレーナーを募集しています。</p>
+        <h2>採用情報</h2>
+        <p class="lead">「ご機嫌」の想いに共感してくださるトレーナーを募集しています。オンラインとスタジオ、それぞれの現場で、女性の身体と向き合う仲間を求めています。</p>
+        <a href="#" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
-      <a href="#" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
+      <div class="ph ph-4x3"><i class="fa-regular fa-image"></i><span>写真（採用）</span></div>
     </div>
   </div>
 </section>
