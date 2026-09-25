@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>IKUM 公式サイト｜トップページ ワイヤーフレーム</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --text-sub: #666666;
+    --border: #e5e5e5;
+    --placeholder-bg: #ededed;
+    --placeholder-text: #999999;
+    --soft: #f7f7f7;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; line-height: 1.9; color: var(--text); background: var(--bg); }
+  a { color: inherit; text-decoration: none; }
+  ul { list-style: none; }
+
+  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 112px 0; }
+  h1 { font-size: 30px; font-weight: 500; line-height: 1.7; letter-spacing: 0.04em; }
+  h2 { font-size: 22px; font-weight: 700; line-height: 1.5; margin-bottom: 24px; letter-spacing: 0.02em; }
+  h3 { font-size: 16px; font-weight: 500; line-height: 1.6; margin-bottom: 8px; }
+  p { margin-bottom: 14px; }
+  .muted { color: var(--text-sub); }
+  .small { font-size: 12px; }
+  .lead { color: var(--text-sub); max-width: 600px; }
+
+  .ph { background: var(--placeholder-bg); color: var(--placeholder-text); display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; }
+  .ph i { font-size: 16px; }
+  .ph-mv { height: 560px; }
+  .ph-4x3 { aspect-ratio: 4 / 3; }
+  .ph-16x9 { aspect-ratio: 16 / 9; }
+  .ph-1x1 { aspect-ratio: 1 / 1; }
+
+  .link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; }
+  .link i { font-size: 11px; }
+  .ext { font-size: 11px; color: var(--text-sub); margin-left: 8px; }
+
+  .wf-note { background: var(--soft); color: var(--text-sub); font-size: 11px; padding: 8px 16px; text-align: center; letter-spacing: 0.04em; }
+  .wf-anno { font-size: 11px; color: var(--placeholder-text); margin-top: 24px; }
+
+  /* 見出し行（左に見出し、右に一覧リンク） */
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 40px; }
+  .section-head h2 { margin-bottom: 0; }
+
+  /* ヘッダー */
+  .site-header { background: #fff; }
+  .header-inner { max-width: 1320px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; }
+  .logo { font-size: 18px; font-weight: 700; line-height: 1.2; }
+  .gnav ul { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+  .header-utils { display: flex; align-items: center; gap: 20px; font-size: 12px; color: var(--text-sub); }
+  .header-utils i { margin-right: 4px; }
+
+  /* メインビジュアル */
+  .mv { padding: 0; }
+  .mv-copy { padding: 72px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .mv-copy .lead { margin-top: 8px; }
+
+  /* IKUMについて */
+  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .about .body p { max-width: 520px; }
+  .about .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 16px; }
+
+  /* 事業 */
+  .biz { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 56px 0; }
+  .biz + .biz { border-top: 1px solid var(--border); }
+  .biz .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 8px; }
+  .biz h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
+  .biz .sub { color: var(--text-sub); margin-bottom: 20px; }
+  .sublist { margin: 20px 0 24px; }
+  .sublist li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
+  .sublist li:last-child { border-bottom: 1px solid var(--border); }
+  .sublist li span:first-child { font-weight: 500; }
+  .sublist li span:last-child { color: var(--text-sub); }
+
+  /* 法人 */
+  .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .corp-list li { padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
+  .corp-list li:last-child { border-bottom: 1px solid var(--border); }
+  .corp-list { margin: 8px 0 28px; }
+
+  /* お知らせ・メディア */
+  .news li { display: grid; grid-template-columns: 100px 100px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--border); align-items: baseline; }
+  .news li:last-child { border-bottom: 1px solid var(--border); }
+  .news .date { font-size: 12px; color: var(--text-sub); }
+  .tag { font-size: 11px; color: var(--text-sub); }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .card .ph { margin-bottom: 16px; }
+  .card h3 { font-size: 15px; margin-bottom: 4px; }
+
+  /* 採用 */
+  .recruit { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .recruit p { margin: 0; }
+
+  /* フッター */
+  footer { padding: 72px 0 40px; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 56px; }
+  .footer-grid h4 { font-size: 12px; color: var(--text-sub); font-weight: 500; margin-bottom: 14px; }
+  .footer-grid li { font-size: 13px; padding: 4px 0; }
+  .footer-grid li .ext { margin-left: 6px; }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-sub); }
+  .footer-bottom ul { display: flex; gap: 20px; }
+</style>
+</head>
+<body>
+
+<div class="wf-note">ワイヤーフレーム（PC）｜文言はすべて仮です。配色・写真・装飾は本デザインで決めます。</div>
+
+<!-- ヘッダー -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">IKUM</div>
+    <nav class="gnav">
+      <ul>
+        <li><a href="#">Rebone</a></li>
+        <li><a href="#">Welme</a></li>
+        <li><a href="#">法人のみなさまへ</a></li>
+        <li><a href="#">IKUMについて</a></li>
+        <li><a href="#">お知らせ</a></li>
+        <li><a href="#">メディア</a></li>
+      </ul>
+    </nav>
+    <div class="header-utils">
+      <a href="#"><i class="fa-regular fa-user"></i>会員ログイン</a>
+      <a href="#"><i class="fa-regular fa-calendar"></i>スタジオ予約</a>
+    </div>
+  </div>
+</header>
+
+<!-- 1. メインビジュアル -->
+<section class="mv">
+  <div class="ph ph-mv"><i class="fa-regular fa-image"></i><span>メインビジュアル</span></div>
+  <div class="container mv-copy">
+    <h1>「わたし」をご機嫌にすることから、<br>すべては始まる。</h1>
+    <p class="lead">IKUM は、骨格から身体を整える「Rebone」と、内側から身体を整える「Welme」を運営する、ウェルネスカンパニーです。</p>
+  </div>
+</section>
+
+<!-- 2. IKUMについて -->
+<section>
+  <div class="container about">
+    <div>
+      <div class="kicker">私たちの想い</div>
+      <h2>生きづらさを感じる全ての人が、心身ともに「わたし」らしく生きられる世の中を目指して。</h2>
+    </div>
+    <div class="body">
+      <p>私たちが考える「ご機嫌」とは、いつもハッピーでポジティブでいることではありません。揺らぐ自分もありのままに受け入れながら、自分で自分の人生を舵取りし、私らしく生きていくこと。そのために、もっとも必要なのが「自分と向き合う時間」です。</p>
+      <p>骨格から身体を整える Rebone と、内側から身体を整える Welme。ふたつのブランドを通して、多様化する女性のライフステージに寄り添い、ご機嫌な毎日をつくるお手伝いをしています。</p>
+      <p>2020年4月、オンラインレッスンから始まりました。同年12月、みなさまのお声から東京・茗荷谷にスタジオを立ち上げ、これまでに1万人以上の女性の身体と向き合ってきました。</p>
+      <p style="margin-top:24px;"><a href="#" class="link">私たちの想いを見る<i class="fa-solid fa-arrow-right"></i></a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. 事業 -->
+<section style="padding-top:0;">
+  <div class="container">
+    <h2>事業</h2>
+
+    <div class="biz">
+      <div class="ph ph-4x3"><i class="fa-regular fa-image"></i><span>写真（Rebone）</span></div>
+      <div>
+        <div class="kicker">骨格から身体を整える</div>
+        <h3>Rebone</h3>
+        <p class="sub">Re（元に戻す）＋ bone（骨）。骨をあるべき位置に戻すことで、ご機嫌な自分に生まれ変わる。そんな想いから誕生したブランドです。解剖学に基づく独自のメソッドで、多様化するライフスタイルに寄り添う受講方法をご用意しています。</p>
+        <ul class="sublist">
+          <li><span>Rebone オンライン</span><span>忙しい日々の中でも、無駄なく効率よく、自分の身体と向き合える場所。月額制のオンラインレッスン</span></li>
+          <li><span>産前・産後</span><span>産前・産後の心と身体を整える、買い切りの講座</span></li>
+          <li><span>Rebone スタジオ</span><span>触れて、気づいて、リアルだからできる整え方。東京・茗荷谷の少人数制スタジオ</span></li>
+        </ul>
+        <a href="#" class="link">Rebone を見る<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <div class="biz">
+      <div class="ph ph-4x3"><i class="fa-regular fa-image"></i><span>写真（Welme）</span></div>
+      <div>
+        <div class="kicker">内側から身体を整える</div>
+        <h3>Welme</h3>
+        <p class="sub">1万人以上の女性の身体と向き合うなかで生まれた、女性のためのコラーゲンプロテインです。コラーゲンペプチド、タンパク質、ビタミンを1杯に。人工甘味料は使わず、ステビア由来の甘みだけで仕上げました。</p>
+        <ul class="sublist">
+          <li><span>フレーバー</span><span>リンゴ風味／ザクロ風味</span></li>
+          <li><span>購入</span><span>公式ショップ（welme.jp）で単品と定期便を販売</span></li>
+        </ul>
+        <a href="#" class="link">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <p class="wf-anno">※申し込み・購入は各ブランドのページから外部（LP／hacomono／welme.jp）へ送ります。トップでは事業の紹介にとどめます。</p>
+  </div>
+</section>
+
+<!-- 4. 法人のみなさまへ -->
+<section style="padding-top:0;">
+  <div class="container corp">
+    <div>
+      <h2>法人のみなさまへ</h2>
+      <p class="lead">骨格から身体を整えるメソッドと、1万人以上の女性と向き合ってきた知見を、企業や施設のみなさまにもお届けしています。</p>
+    </div>
+    <div>
+      <ul class="corp-list">
+        <li>レッスンの監修</li>
+        <li>法人向けのレッスン提供</li>
+        <li>産院・産後ケアホテルへのオンラインレッスン導入</li>
+        <li>福利厚生としての Rebone オンライン法人契約</li>
+        <li>Welme の卸・OEM</li>
+        <li>イベントへの登壇・コラボレーション</li>
+      </ul>
+      <a href="#" class="link">法人のみなさまへ<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 5. お知らせ -->
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <h2>お知らせ</h2>
+      <a href="#" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <ul class="news">
+      <li><span class="date">2026.09.12</span><span class="tag">Welme</span><span>新フレーバーの発売について</span></li>
+      <li><span class="date">2026.09.05</span><span class="tag">スタジオ</span><span>9月の休講日について</span></li>
+      <li><span class="date">2026.08.30</span><span class="tag">イベント</span><span>ウェルネスイベントに登壇します</span></li>
+      <li><span class="date">2026.08.20</span><span class="tag">オンライン</span><span>9月のライブレッスンのテーマについて</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. メディア -->
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="section-head">
+      <h2>メディア</h2>
+      <a href="#" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
+        <span class="tag">会員インタビュー</span>
+        <h3>会員インタビュー記事のタイトル</h3>
+        <p class="small muted">2026.09.10</p>
+      </div>
+      <div class="card">
+        <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
+        <span class="tag">会員インタビュー</span>
+        <h3>会員インタビュー記事のタイトル</h3>
+        <p class="small muted">2026.08.28</p>
+      </div>
+      <div class="card">
+        <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
+        <span class="tag">読み物</span>
+        <h3>読み物記事のタイトル</h3>
+        <p class="small muted">2026.08.15</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. 採用 -->
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="recruit">
+      <div>
+        <h3>採用情報</h3>
+        <p class="muted small">「ご機嫌」の想いに共感してくださるトレーナーを募集しています。</p>
+      </div>
+      <a href="#" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- フッター -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">IKUM</div>
+        <p class="small muted" style="margin-top:12px;">IKUM株式会社<br>東京都文京区大塚3-1-6</p>
+      </div>
+      <div>
+        <h4>事業</h4>
+        <ul>
+          <li>Rebone</li>
+          <li>　Rebone オンライン</li>
+          <li>　産前・産後</li>
+          <li>　Rebone スタジオ</li>
+          <li>Welme</li>
+          <li>法人のみなさまへ</li>
+        </ul>
+      </div>
+      <div>
+        <h4>会社</h4>
+        <ul>
+          <li>IKUMについて</li>
+          <li>お知らせ</li>
+          <li>メディア</li>
+          <li>採用情報</li>
+          <li>お問い合わせ</li>
+        </ul>
+      </div>
+      <div>
+        <h4>会員のみなさま・SNS</h4>
+        <ul>
+          <li>会員ログイン<span class="ext">外部</span></li>
+          <li>スタジオ予約<span class="ext">外部</span></li>
+          <li>LINE 公式<span class="ext">外部</span></li>
+          <li>Instagram（Yori ／ Rebone ／ Welme）</li>
+          <li>YouTube</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <ul>
+        <li>プライバシーポリシー</li>
+        <li>利用規約</li>
+        <li>特定商取引法に基づく表記</li>
+      </ul>
+      <span>© IKUM Inc.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
