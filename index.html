@@ -54,7 +54,13 @@
   .site-header { background: #fff; }
   .header-inner { max-width: 1320px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; }
   .logo { font-size: 18px; font-weight: 700; line-height: 1.2; }
-  .gnav ul { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+  .gnav > ul { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
+  .gnav li { position: relative; }
+  .gnav .has-sub > a i { font-size: 10px; margin-left: 6px; color: var(--text-sub); }
+  .gnav .sub { display: none; position: absolute; top: 100%; left: -16px; padding-top: 12px; z-index: 10; }
+  .gnav .has-sub:hover .sub { display: block; }
+  .gnav .sub ul { background: #fff; border: 1px solid var(--border); min-width: 200px; padding: 8px 0; }
+  .gnav .sub li a { display: block; padding: 8px 16px; font-size: 13px; font-weight: 400; white-space: nowrap; }
 
   /* メインビジュアル */
   .mv { padding: 48px 0 0; }
@@ -63,7 +69,7 @@
   .mv-inner .lead { margin-top: 24px; }
   .ph-mv { height: 560px; }
 
-  /* IKUMについて */
+  /* 私たちの想い */
   .about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .about .body p { max-width: 520px; margin-bottom: 22px; }
   .about .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 16px; }
@@ -80,10 +86,15 @@
   .biz h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
   .biz .sub { color: var(--text-sub); margin-bottom: 20px; }
   .sublist { margin: 20px 0 24px; }
-  .sublist li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
+  .sublist li { border-top: 1px solid var(--border); font-size: 13px; }
   .sublist li:last-child { border-bottom: 1px solid var(--border); }
-  .sublist li span:first-child { font-weight: 500; }
-  .sublist li span:last-child { color: var(--text-sub); }
+  .sublist li a { display: grid; grid-template-columns: 140px 1fr 16px; gap: 16px; align-items: center; padding: 12px 0; }
+  .sublist li span:nth-child(1) { font-weight: 500; }
+  .sublist li span:nth-child(2) { color: var(--text-sub); }
+  .sublist li i { font-size: 11px; color: var(--text-sub); }
+  .sublist.static li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 10px 0; }
+  .sublist.static li span:first-child { font-weight: 500; }
+  .sublist.static li span:last-child { color: var(--text-sub); }
 
   /* 法人 */
   .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -132,10 +143,16 @@
     <div class="logo">IKUM</div>
     <nav class="gnav">
       <ul>
-        <li><a href="#">Rebone</a></li>
+        <li class="has-sub"><a href="#">Rebone<i class="fa-solid fa-chevron-down"></i></a>
+          <div class="sub"><ul>
+            <li><a href="#">Rebone オンライン</a></li>
+            <li><a href="#">産前・産後</a></li>
+            <li><a href="#">Rebone スタジオ</a></li>
+          </ul></div>
+        </li>
         <li><a href="#">Welme</a></li>
         <li><a href="#">法人のみなさまへ</a></li>
-        <li><a href="#">IKUMについて</a></li>
+        <li><a href="#">私たちについて</a></li>
         <li><a href="#">お知らせ</a></li>
         <li><a href="#">メディア</a></li>
       </ul>
@@ -162,10 +179,9 @@
       <h2>骨格から身体を整えて、<br>ココロもカラダもご機嫌に。</h2>
     </div>
     <div class="body">
-      <p>本当は、もっと仕事を頑張りたい。<br>家族と全力で笑い合いたい。<br>趣味を思いきり楽しみたい。<br>なのに、肩こり、頭痛、むくみ、腰痛、生理痛…。<br>身体の重たさが、心まで曇らせてしまう。</p>
-      <p>さらに、慌ただしい日々の中で<br>SNSを開けば、きらきらと輝く誰かが目に映る。<br>気づけば、そんな自分と比べてしまう。</p>
-      <p>だけど——<br>わたしの心地よさは、誰かと比べるものじゃない。<br>もっと軽やかに、もっとしなやかに。<br>大切にしたいことに、まっすぐ向き合える自分でいたい。</p>
-      <p>ここは、「わたしらしく」あるための場所。<br>本当に必要なのは、自分と向き合う時間。<br>深呼吸して、ココロとカラダを整える。<br>すこやかな身体で、ゆらぐ自分も受け入れながら生きていく。</p>
+      <p>本当は、もっと仕事を頑張りたい。<br>家族と全力で笑い合いたい。<br>なのに、肩こり、頭痛、むくみ、腰痛、生理痛…。<br>身体の重たさが、心まで曇らせてしまう。</p>
+      <p>わたしの心地よさは、誰かと比べるものじゃない。<br>もっと軽やかに、もっとしなやかに。</p>
+      <p>本当に必要なのは、自分と向き合う時間。<br>深呼吸して、ココロとカラダを整える。<br>すこやかな身体で、ゆらぐ自分も受け入れながら生きていく。</p>
       <p>ご機嫌に、わたしを生きる。</p>
       <p style="margin-top:24px;"><a href="#" class="link">私たちについて<i class="fa-solid fa-arrow-right"></i></a></p>
     </div>
@@ -198,9 +214,9 @@
         <h3>Rebone</h3>
         <p class="sub">Re（元に戻す）＋ bone（骨）。骨をあるべき位置に戻すことで、ご機嫌な自分に生まれ変わる。そんな想いから誕生したブランドです。解剖学に基づく独自のメソッドで、多様化するライフスタイルに寄り添う受講方法をご用意しています。</p>
         <ul class="sublist">
-          <li><span>Rebone オンライン</span><span>忙しい日々の中でも、無駄なく効率よく、自分の身体と向き合える場所。月額制のオンラインレッスン</span></li>
-          <li><span>産前・産後</span><span>産前・産後の心と身体を整える、買い切りの講座</span></li>
-          <li><span>Rebone スタジオ</span><span>触れて、気づいて、リアルだからできる整え方。東京・茗荷谷の少人数制スタジオ</span></li>
+          <li><a href="#"><span>Rebone オンライン</span><span>忙しい日々の中でも、無駄なく効率よく、自分の身体と向き合える場所。月額制のオンラインレッスン</span><i class="fa-solid fa-arrow-right"></i></a></li>
+          <li><a href="#"><span>産前・産後</span><span>産前・産後の心と身体を整える、買い切りの講座</span><i class="fa-solid fa-arrow-right"></i></a></li>
+          <li><a href="#"><span>Rebone スタジオ</span><span>触れて、気づいて、リアルだからできる整え方。東京・茗荷谷の少人数制スタジオ</span><i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
         <a href="#" class="link">Rebone を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
@@ -212,7 +228,7 @@
         <div class="kicker">内側から身体を整える</div>
         <h3>Welme</h3>
         <p class="sub">1万人以上の女性の身体と向き合うなかで生まれた、女性のためのコラーゲンプロテインです。コラーゲンペプチド、タンパク質、ビタミンを1杯に。人工甘味料は使わず、ステビア由来の甘みだけで仕上げました。</p>
-        <ul class="sublist">
+        <ul class="sublist static">
           <li><span>フレーバー</span><span>リンゴ風味／ザクロ風味</span></li>
           <li><span>購入</span><span>公式ショップ（welme.jp）で単品と定期便を販売</span></li>
         </ul>
@@ -341,7 +357,7 @@
       </div>
       <div>
         <ul>
-          <li>IKUMについて</li>
+          <li>私たちについて</li>
           <li>お知らせ</li>
           <li>メディア</li>
           <li>採用情報</li>
