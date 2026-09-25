@@ -68,16 +68,10 @@
   .about .body p { max-width: 520px; margin-bottom: 22px; }
   .about .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 16px; }
 
-  /* 写真マーキー（自動横スクロール） */
+  /* 写真帯（横並び。本番は自動横スクロール） */
   .marquee { padding: 0 0 112px; overflow: hidden; }
-  .marquee-track { display: flex; gap: 24px; width: max-content; animation: marquee 60s linear infinite; }
-  .marquee:hover .marquee-track { animation-play-state: paused; }
-  .marquee .ph { flex: 0 0 auto; height: 320px; }
-  .marquee .ph.w-l { width: 480px; }
-  .marquee .ph.w-m { width: 360px; }
-  .marquee .ph.w-s { width: 240px; }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+  .marquee-track { display: flex; gap: 24px; width: max-content; }
+  .marquee .ph { flex: 0 0 auto; width: 480px; height: 320px; }
 
   /* 事業 */
   .biz { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 56px 0; }
@@ -178,25 +172,17 @@
   </div>
 </section>
 
-<!-- 2b. 写真（自動横スクロール） -->
+<!-- 2b. 写真帯（本番は自動横スクロール） -->
 <section class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真01</span></div>
-    <div class="ph w-s"><i class="fa-regular fa-image"></i><span>写真02</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真03</span></div>
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真04</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真05</span></div>
-    <div class="ph w-s"><i class="fa-regular fa-image"></i><span>写真06</span></div>
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真07</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真08</span></div>
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真01</span></div>
-    <div class="ph w-s"><i class="fa-regular fa-image"></i><span>写真02</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真03</span></div>
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真04</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真05</span></div>
-    <div class="ph w-s"><i class="fa-regular fa-image"></i><span>写真06</span></div>
-    <div class="ph w-l"><i class="fa-regular fa-image"></i><span>写真07</span></div>
-    <div class="ph w-m"><i class="fa-regular fa-image"></i><span>写真08</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真01</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真02</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真03</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真04</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真05</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真06</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真07</span></div>
+    <div class="ph"><i class="fa-regular fa-image"></i><span>写真08</span></div>
   </div>
 </section>
 
