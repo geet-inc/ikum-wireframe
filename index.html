@@ -92,9 +92,6 @@
   .sublist li span:nth-child(1) { font-weight: 500; }
   .sublist li span:nth-child(2) { color: var(--text-sub); }
   .sublist li i { font-size: 11px; color: var(--text-sub); }
-  .sublist.static li { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 10px 0; }
-  .sublist.static li span:first-child { font-weight: 500; }
-  .sublist.static li span:last-child { color: var(--text-sub); }
 
   /* 法人 */
   .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
@@ -117,10 +114,12 @@
   .recruit .lead { max-width: none; margin-bottom: 28px; }
 
   /* CTA */
-  .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cta { display: grid; grid-template-columns: 1.9fr 1fr; gap: 32px; }
   .cta-col { border: 1px solid var(--border); padding: 48px 40px; }
   .cta-col h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
   .cta-col p { color: var(--text-sub); font-size: 13px; min-height: 52px; }
+  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-row .btn { padding: 12px 20px; }
   .btn { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--text); padding: 14px 28px; font-size: 13px; font-weight: 500; }
   .btn i { font-size: 12px; }
 
@@ -227,12 +226,8 @@
       <div>
         <div class="kicker">内側から身体を整える</div>
         <h3>Welme</h3>
-        <p class="sub">1万人以上の女性の身体と向き合うなかで生まれた、女性のためのコラーゲンプロテインです。コラーゲンペプチド、タンパク質、ビタミンを1杯に。人工甘味料は使わず、ステビア由来の甘みだけで仕上げました。</p>
-        <ul class="sublist static">
-          <li><span>フレーバー</span><span>リンゴ風味／ザクロ風味</span></li>
-          <li><span>購入</span><span>公式ショップ（welme.jp）で単品と定期便を販売</span></li>
-        </ul>
-        <a href="#" class="link">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
+        <p class="sub">骨格を整えても、身体をつくる材料が足りなければ、ご機嫌な毎日は続きません。Welme は、1万人以上の女性の身体と向き合うなかで生まれた、内側から身体を整えるためのブランド。日々の食事では補いきれない栄養を、手軽に、おいしく。Rebone と対になる、もうひとつの整え方です。</p>
+        <a href="#" class="link" style="margin-top:8px;">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -290,14 +285,14 @@
       </div>
       <div class="card">
         <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
-        <span class="tag">会員インタビュー</span>
-        <h3>会員インタビュー記事のタイトル</h3>
+        <span class="tag">骨格</span>
+        <h3>骨格に関する記事のタイトル</h3>
         <p class="small muted">2026.08.28</p>
       </div>
       <div class="card">
         <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
-        <span class="tag">コラム</span>
-        <h3>コラム記事のタイトル</h3>
+        <span class="tag">栄養</span>
+        <h3>栄養に関する記事のタイトル</h3>
         <p class="small muted">2026.08.15</p>
       </div>
     </div>
@@ -325,8 +320,12 @@
     <div class="cta">
       <div class="cta-col">
         <h3>一般のお問い合わせ</h3>
-        <p>レッスンやスタジオ、Welme についてのご質問は、LINE からお気軽にお送りください。</p>
-        <a href="#" class="btn"><i class="fa-brands fa-line"></i>LINE でお問い合わせ<span class="ext">外部</span></a>
+        <p>レッスンや商品についてのご質問は、各サービスの LINE からお気軽にお送りください。</p>
+        <div class="btn-row">
+          <a href="#" class="btn"><i class="fa-brands fa-line"></i>Rebone オンライン<span class="ext">外部</span></a>
+          <a href="#" class="btn"><i class="fa-brands fa-line"></i>Rebone スタジオ<span class="ext">外部</span></a>
+          <a href="#" class="btn"><i class="fa-brands fa-line"></i>Welme<span class="ext">外部</span></a>
+        </div>
       </div>
       <div class="cta-col">
         <h3>法人のお問い合わせ</h3>
