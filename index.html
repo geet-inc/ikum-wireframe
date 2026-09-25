@@ -36,7 +36,6 @@
 
   .ph { background: var(--placeholder-bg); color: var(--placeholder-text); display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; }
   .ph i { font-size: 16px; }
-  .ph-mv { height: 560px; }
   .ph-4x3 { aspect-ratio: 4 / 3; }
   .ph-16x9 { aspect-ratio: 16 / 9; }
   .ph-1x1 { aspect-ratio: 1 / 1; }
@@ -46,7 +45,6 @@
   .ext { font-size: 11px; color: var(--text-sub); margin-left: 8px; }
 
   .wf-note { background: var(--soft); color: var(--text-sub); font-size: 11px; padding: 8px 16px; text-align: center; letter-spacing: 0.04em; }
-  .wf-anno { font-size: 11px; color: var(--placeholder-text); margin-top: 24px; }
 
   /* 見出し行（左に見出し、右に一覧リンク） */
   .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 40px; }
@@ -57,13 +55,13 @@
   .header-inner { max-width: 1320px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; }
   .logo { font-size: 18px; font-weight: 700; line-height: 1.2; }
   .gnav ul { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
-  .header-utils { display: flex; align-items: center; gap: 20px; font-size: 12px; color: var(--text-sub); }
-  .header-utils i { margin-right: 4px; }
 
   /* メインビジュアル */
-  .mv { padding: 0; }
-  .mv-copy { padding: 72px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .mv-copy .lead { margin-top: 8px; }
+  .mv { padding: 48px 0 0; }
+  .mv-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
+  .mv-inner h1 { font-size: 28px; }
+  .mv-inner .lead { margin-top: 24px; }
+  .ph-mv { height: 560px; }
 
   /* IKUMについて */
   .about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
@@ -101,6 +99,14 @@
   .recruit { display: flex; justify-content: space-between; align-items: baseline; gap: 32px; padding: 40px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
   .recruit p { margin: 0; }
 
+  /* CTA */
+  .cta { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+  .cta-col { border: 1px solid var(--border); padding: 48px 40px; }
+  .cta-col h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
+  .cta-col p { color: var(--text-sub); font-size: 13px; min-height: 52px; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--text); padding: 14px 28px; font-size: 13px; font-weight: 500; }
+  .btn i { font-size: 12px; }
+
   /* フッター */
   footer { padding: 72px 0 40px; }
   .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 56px; }
@@ -129,19 +135,17 @@
         <li><a href="#">メディア</a></li>
       </ul>
     </nav>
-    <div class="header-utils">
-      <a href="#"><i class="fa-regular fa-user"></i>会員ログイン</a>
-      <a href="#"><i class="fa-regular fa-calendar"></i>スタジオ予約</a>
-    </div>
   </div>
 </header>
 
 <!-- 1. メインビジュアル -->
 <section class="mv">
-  <div class="ph ph-mv"><i class="fa-regular fa-image"></i><span>メインビジュアル</span></div>
-  <div class="container mv-copy">
-    <h1>「わたし」をご機嫌にすることから、<br>すべては始まる。</h1>
-    <p class="lead">IKUM は、骨格から身体を整える「Rebone」と、内側から身体を整える「Welme」を運営する、ウェルネスカンパニーです。</p>
+  <div class="container mv-inner">
+    <div>
+      <h1>「わたし」をご機嫌にすることから、<br>すべては始まる。</h1>
+      <p class="lead">IKUM は、骨格から身体を整える「Rebone」と、内側から身体を整える「Welme」を運営する、ウェルネスカンパニーです。</p>
+    </div>
+    <div class="ph ph-mv"><i class="fa-regular fa-image"></i><span>メインビジュアル</span></div>
   </div>
 </section>
 
@@ -194,7 +198,6 @@
         <a href="#" class="link">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
-    <p class="wf-anno">※申し込み・購入は各ブランドのページから外部（LP／hacomono／welme.jp）へ送ります。トップでは事業の紹介にとどめます。</p>
   </div>
 </section>
 
@@ -227,10 +230,10 @@
       <a href="#" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <ul class="news">
-      <li><span class="date">2026.09.12</span><span class="tag">Welme</span><span>新フレーバーの発売について</span></li>
-      <li><span class="date">2026.09.05</span><span class="tag">スタジオ</span><span>9月の休講日について</span></li>
+      <li><span class="date">2026.09.12</span><span class="tag">プレスリリース</span><span>Welme 新フレーバーの発売について</span></li>
+      <li><span class="date">2026.09.05</span><span class="tag">お知らせ</span><span>9月の休講日について</span></li>
       <li><span class="date">2026.08.30</span><span class="tag">イベント</span><span>ウェルネスイベントに登壇します</span></li>
-      <li><span class="date">2026.08.20</span><span class="tag">オンライン</span><span>9月のライブレッスンのテーマについて</span></li>
+      <li><span class="date">2026.08.20</span><span class="tag">お知らせ</span><span>9月のライブレッスンのテーマについて</span></li>
     </ul>
   </div>
 </section>
@@ -257,8 +260,8 @@
       </div>
       <div class="card">
         <div class="ph ph-16x9"><i class="fa-regular fa-image"></i><span>記事サムネイル</span></div>
-        <span class="tag">読み物</span>
-        <h3>読み物記事のタイトル</h3>
+        <span class="tag">コラム</span>
+        <h3>コラム記事のタイトル</h3>
         <p class="small muted">2026.08.15</p>
       </div>
     </div>
@@ -274,6 +277,25 @@
         <p class="muted small">「ご機嫌」の想いに共感してくださるトレーナーを募集しています。</p>
       </div>
       <a href="#" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. お問い合わせ（CTA） -->
+<section style="padding-top:0;">
+  <div class="container">
+    <h2>お問い合わせ</h2>
+    <div class="cta">
+      <div class="cta-col">
+        <h3>一般のお問い合わせ</h3>
+        <p>レッスンやスタジオ、Welme についてのご質問は、LINE からお気軽にお送りください。</p>
+        <a href="#" class="btn"><i class="fa-brands fa-line"></i>LINE でお問い合わせ<span class="ext">外部</span></a>
+      </div>
+      <div class="cta-col">
+        <h3>法人のお問い合わせ</h3>
+        <p>監修・法人契約・卸・イベント登壇などのご相談は、法人専用フォームからお送りください。</p>
+        <a href="#" class="btn">法人お問い合わせフォーム<i class="fa-solid fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
 </section>
