@@ -9,156 +9,35 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-<style>
-  :root {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --text-sub: #666666;
-    --border: #e5e5e5;
-    --placeholder-bg: #ededed;
-    --placeholder-text: #999999;
-    --soft: #f7f7f7;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: 'Noto Sans JP', sans-serif; font-size: 14px; line-height: 1.9; color: var(--text); background: var(--bg); }
-  a { color: inherit; text-decoration: none; }
-  ul { list-style: none; }
-
-  .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-  section { padding: 112px 0; }
-  h1 { font-size: 30px; font-weight: 500; line-height: 1.7; letter-spacing: 0.04em; }
-  h2 { font-size: 22px; font-weight: 700; line-height: 1.5; margin-bottom: 24px; letter-spacing: 0.02em; }
-  h3 { font-size: 16px; font-weight: 500; line-height: 1.6; margin-bottom: 8px; }
-  p { margin-bottom: 14px; }
-  .muted { color: var(--text-sub); }
-  .small { font-size: 12px; }
-  .lead { color: var(--text-sub); max-width: 600px; }
-
-  .ph { background: var(--placeholder-bg); color: var(--placeholder-text); display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 13px; }
-  .ph i { font-size: 16px; }
-  .ph-4x3 { aspect-ratio: 4 / 3; }
-  .ph-16x9 { aspect-ratio: 16 / 9; }
-  .ph-1x1 { aspect-ratio: 1 / 1; }
-
-  .link { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 500; }
-  .link i { font-size: 11px; }
-  .ext { font-size: 11px; color: var(--text-sub); margin-left: 8px; }
-
-  .wf-note { background: var(--soft); color: var(--text-sub); font-size: 11px; padding: 8px 16px; text-align: center; letter-spacing: 0.04em; }
-
-  /* 見出し行（左に見出し、右に一覧リンク） */
-  .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 40px; }
-  .section-head h2 { margin-bottom: 0; }
-
-  /* ヘッダー */
-  .site-header { background: #fff; }
-  .header-inner { max-width: 1320px; margin: 0 auto; padding: 24px 24px; display: flex; align-items: center; justify-content: space-between; }
-  .logo { font-size: 18px; font-weight: 700; line-height: 1.2; }
-  .gnav > ul { display: flex; gap: 32px; font-size: 14px; font-weight: 500; }
-  .gnav li { position: relative; }
-  .gnav .has-sub > a i { font-size: 10px; margin-left: 6px; color: var(--text-sub); }
-  .gnav .sub { display: none; position: absolute; top: 100%; left: -16px; padding-top: 12px; z-index: 10; }
-  .gnav .has-sub:hover .sub { display: block; }
-  .gnav .sub ul { background: #fff; border: 1px solid var(--border); min-width: 200px; padding: 8px 0; }
-  .gnav .sub li a { display: block; padding: 8px 16px; font-size: 13px; font-weight: 400; white-space: nowrap; }
-
-  /* メインビジュアル */
-  .mv { padding: 48px 0 0; }
-  .mv-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; }
-  .mv-inner h1 { font-size: 28px; }
-  .mv-inner .lead { margin-top: 24px; }
-  .ph-mv { height: 560px; }
-
-  /* 私たちの想い */
-  .about { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
-  .about .body p { max-width: 520px; margin-bottom: 22px; }
-  .about .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 16px; }
-
-  /* 写真帯（横並び。本番は自動横スクロール） */
-  .marquee { padding: 0 0 112px; overflow: hidden; }
-  .marquee-track { display: flex; gap: 24px; width: max-content; }
-  .marquee .ph { flex: 0 0 auto; width: 480px; height: 320px; }
-
-  /* 事業 */
-  .biz { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 56px 0; }
-  .biz + .biz { border-top: 1px solid var(--border); }
-  .biz .kicker { font-size: 12px; color: var(--text-sub); margin-bottom: 8px; }
-  .biz h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
-  .biz .sub { color: var(--text-sub); margin-bottom: 20px; }
-  .sublist { margin: 20px 0 24px; }
-  .sublist li { border-top: 1px solid var(--border); font-size: 13px; }
-  .sublist li:last-child { border-bottom: 1px solid var(--border); }
-  .sublist li a { display: grid; grid-template-columns: 140px 1fr 16px; gap: 16px; align-items: center; padding: 12px 0; }
-  .sublist li span:nth-child(1) { font-weight: 500; }
-  .sublist li span:nth-child(2) { color: var(--text-sub); }
-  .sublist li i { font-size: 11px; color: var(--text-sub); }
-
-  /* 法人 */
-  .corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  .corp .lead { max-width: none; }
-  .corp-list li { padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
-  .corp-list li:last-child { border-bottom: 1px solid var(--border); }
-  .corp-list { margin: 8px 0 28px; }
-
-  /* お知らせ・メディア */
-  .news li { display: grid; grid-template-columns: 100px 100px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--border); align-items: baseline; }
-  .news li:last-child { border-bottom: 1px solid var(--border); }
-  .news .date { font-size: 12px; color: var(--text-sub); }
-  .tag { font-size: 11px; color: var(--text-sub); }
-  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
-  .card .ph { margin-bottom: 16px; }
-  .card h3 { font-size: 15px; margin-bottom: 4px; }
-
-  /* 採用 */
-  .recruit { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
-  .recruit .lead { max-width: none; margin-bottom: 28px; }
-
-  /* CTA */
-  .cta { display: grid; grid-template-columns: 1.9fr 1fr; gap: 32px; }
-  .cta-col { border: 1px solid var(--border); padding: 48px 40px; }
-  .cta-col h3 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-  .cta-col p { color: var(--text-sub); font-size: 13px; min-height: 52px; }
-  .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
-  .btn-row .btn { padding: 12px 20px; }
-  .btn { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--text); padding: 14px 28px; font-size: 13px; font-weight: 500; }
-  .btn i { font-size: 12px; }
-
-  /* フッター */
-  footer { padding: 72px 0 40px; }
-  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 56px; }
-  .footer-grid li { font-size: 13px; padding: 4px 0; }
-  .footer-grid li .ext { margin-left: 6px; }
-  .footer-bottom { display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--text-sub); }
-  .footer-bottom ul { display: flex; gap: 20px; }
-</style>
+<link rel="stylesheet" href="assets/wire.css">
 </head>
 <body>
 
 <div class="wf-note">ワイヤーフレーム（PC）｜文言はすべて仮です。配色・写真・装飾は本デザインで決めます。</div>
+<div class="wf-index">WF一覧：<a href="" class="current">トップ</a>｜<a href="rebone/">Rebone</a>｜<a href="welme/">Welme</a>｜<a href="corporate/">法人のみなさまへ</a>｜<a href="company/">私たちについて</a>｜<a href="news/">お知らせ</a>｜<a href="media/">メディア</a>｜<a href="recruit/">採用情報</a>｜<a href="contact/">お問い合わせ</a>｜<a href="privacy/">プライバシーポリシー</a>｜<a href="terms/">利用規約</a>｜<a href="tokushoho/">特定商取引法に基づく表記</a>｜<a href="404/">404</a></div>
 
 <!-- ヘッダー -->
 <header class="site-header">
   <div class="header-inner">
-    <div class="logo">IKUM</div>
+    <a class="logo" href="">IKUM</a>
     <nav class="gnav">
       <ul>
-        <li class="has-sub"><a href="#">Rebone<i class="fa-solid fa-chevron-down"></i></a>
+        <li class="has-sub"><a href="rebone/">Rebone<i class="fa-solid fa-chevron-down"></i></a>
           <div class="sub"><ul>
             <li><a href="#">Rebone オンライン</a></li>
             <li><a href="#">産前・産後</a></li>
             <li><a href="#">Rebone スタジオ</a></li>
           </ul></div>
         </li>
-        <li><a href="#">Welme</a></li>
-        <li><a href="#">法人のみなさまへ</a></li>
-        <li><a href="#">私たちについて</a></li>
-        <li><a href="#">お知らせ</a></li>
-        <li><a href="#">メディア</a></li>
+        <li><a href="welme/">Welme</a></li>
+        <li><a href="corporate/">法人のみなさまへ</a></li>
+        <li><a href="company/">私たちについて</a></li>
+        <li><a href="news/">お知らせ</a></li>
+        <li><a href="media/">メディア</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
 <!-- 1. メインビジュアル -->
 <section class="mv">
   <div class="container mv-inner">
@@ -182,7 +61,7 @@
       <p>わたしの心地よさは、誰かと比べるものじゃない。<br>もっと軽やかに、もっとしなやかに。</p>
       <p>本当に必要なのは、自分と向き合う時間。<br>深呼吸して、ココロとカラダを整える。<br>すこやかな身体で、ゆらぐ自分も受け入れながら生きていく。</p>
       <p>ご機嫌に、わたしを生きる。</p>
-      <p style="margin-top:24px;"><a href="#" class="link">私たちについて<i class="fa-solid fa-arrow-right"></i></a></p>
+      <p style="margin-top:24px;"><a href="company/" class="link">私たちについて<i class="fa-solid fa-arrow-right"></i></a></p>
     </div>
   </div>
 </section>
@@ -217,7 +96,7 @@
           <li><a href="#"><span>産前・産後</span><span>産前・産後の心と身体を整える、買い切りの講座</span><i class="fa-solid fa-arrow-right"></i></a></li>
           <li><a href="#"><span>Rebone スタジオ</span><span>触れて、気づいて、リアルだからできる整え方。東京・茗荷谷の少人数制スタジオ</span><i class="fa-solid fa-arrow-right"></i></a></li>
         </ul>
-        <a href="#" class="link">Rebone を見る<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="rebone/" class="link">Rebone を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
 
@@ -227,7 +106,7 @@
         <div class="kicker">内側から身体を整える</div>
         <h3>Welme</h3>
         <p class="sub">骨格を整えても、身体をつくる材料が足りなければ、ご機嫌な毎日は続きません。Welme は、1万人以上の女性の身体と向き合うなかで生まれた、内側から身体を整えるためのブランド。日々の食事では補いきれない栄養を、手軽に、おいしく。Rebone と対になる、もうひとつの整え方です。</p>
-        <a href="#" class="link" style="margin-top:8px;">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="welme/" class="link" style="margin-top:8px;">Welme を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
     </div>
   </div>
@@ -248,7 +127,7 @@
         <li>Welme の卸・OEM</li>
         <li>イベントへの登壇・コラボレーション</li>
       </ul>
-      <a href="#" class="link">法人のみなさまへ<i class="fa-solid fa-arrow-right"></i></a>
+      <a href="corporate/" class="link">法人のみなさまへ<i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
@@ -258,7 +137,7 @@
   <div class="container">
     <div class="section-head">
       <h2>お知らせ</h2>
-      <a href="#" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
+      <a href="news/" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <ul class="news">
       <li><span class="date">2026.09.12</span><span class="tag">プレスリリース</span><span>Welme 新フレーバーの発売について</span></li>
@@ -274,7 +153,7 @@
   <div class="container">
     <div class="section-head">
       <h2>メディア</h2>
-      <a href="#" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
+      <a href="media/" class="link">一覧を見る<i class="fa-solid fa-arrow-right"></i></a>
     </div>
     <div class="grid-3">
       <div class="card">
@@ -306,7 +185,7 @@
       <div>
         <h2>採用情報</h2>
         <p class="lead">「ご機嫌」の想いに共感してくださるトレーナーを募集しています。オンラインとスタジオ、それぞれの現場で、女性の身体と向き合う仲間を求めています。</p>
-        <a href="#" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
+        <a href="recruit/" class="link">採用情報を見る<i class="fa-solid fa-arrow-right"></i></a>
       </div>
       <div class="ph ph-4x3"><i class="fa-regular fa-image"></i><span>写真（採用）</span></div>
     </div>
@@ -336,6 +215,7 @@
   </div>
 </section>
 
+
 <!-- フッター -->
 <footer>
   <div class="container">
@@ -346,21 +226,21 @@
       </div>
       <div>
         <ul>
-          <li>Rebone</li>
-          <li>　Rebone オンライン</li>
-          <li>　産前・産後</li>
-          <li>　Rebone スタジオ</li>
-          <li>Welme</li>
-          <li>法人のみなさまへ</li>
+          <li><a href="rebone/">Rebone</a></li>
+          <li>　<a href="#">Rebone オンライン</a></li>
+          <li>　<a href="#">産前・産後</a></li>
+          <li>　<a href="#">Rebone スタジオ</a></li>
+          <li><a href="welme/">Welme</a></li>
+          <li><a href="corporate/">法人のみなさまへ</a></li>
         </ul>
       </div>
       <div>
         <ul>
-          <li>私たちについて</li>
-          <li>お知らせ</li>
-          <li>メディア</li>
-          <li>採用情報</li>
-          <li>お問い合わせ</li>
+          <li><a href="company/">私たちについて</a></li>
+          <li><a href="news/">お知らせ</a></li>
+          <li><a href="media/">メディア</a></li>
+          <li><a href="recruit/">採用情報</a></li>
+          <li><a href="contact/">お問い合わせ</a></li>
         </ul>
       </div>
       <div>
@@ -375,9 +255,9 @@
     </div>
     <div class="footer-bottom">
       <ul>
-        <li>プライバシーポリシー</li>
-        <li>利用規約</li>
-        <li>特定商取引法に基づく表記</li>
+        <li><a href="privacy/">プライバシーポリシー</a></li>
+        <li><a href="terms/">利用規約</a></li>
+        <li><a href="tokushoho/">特定商取引法に基づく表記</a></li>
       </ul>
       <span>© IKUM Inc.</span>
     </div>
