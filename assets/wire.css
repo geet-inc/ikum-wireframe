@@ -106,6 +106,12 @@ p { margin-bottom: 14px; }
 .sublist li span:nth-child(2) { color: var(--text-sub); }
 .sublist li i { font-size: 11px; color: var(--text-sub); }
 
+/* トップ: 法人・採用（文章＋写真の2カラム） */
+.corp { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.corp .lead { max-width: none; }
+.recruit { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.recruit .lead { max-width: none; margin-bottom: 28px; }
+
 /* リスト（罫線区切り） */
 .corp-list { margin: 8px 0 28px; }
 .corp-list li { padding: 10px 0; border-top: 1px solid var(--border); font-size: 13px; }
