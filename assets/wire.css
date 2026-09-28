@@ -96,6 +96,7 @@ p { margin-bottom: 14px; }
 /* 事業ブロック */
 .biz { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; padding: 56px 0; }
 .biz + .biz { border-top: 1px solid var(--border); }
+.biz .kicker { margin-bottom: 8px; }
 .biz h3 { font-size: 22px; font-weight: 700; margin-bottom: 12px; }
 .biz .sub { color: var(--text-sub); margin-bottom: 20px; }
 .sublist { margin: 20px 0 24px; }
