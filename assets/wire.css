@@ -341,3 +341,7 @@ footer { padding: 72px 0 40px; }
 
 /* アクセス */
 .access { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+
+/* Rebone: メソッド本文 */
+.method-text p { margin-bottom: 18px; }
+.method-text h3 { font-size: 18px; margin-bottom: 16px; }
