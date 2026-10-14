@@ -345,3 +345,11 @@ footer { padding: 72px 0 40px; }
 /* Rebone: メソッド本文 */
 .method-text p { margin-bottom: 18px; }
 .method-text h3 { font-size: 20px; font-weight: 700; line-height: 1.6; margin-bottom: 20px; }
+
+/* 商品 CTA（写真＋訴求点＋購入ボタン） */
+.cta-product { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; border: 1px solid var(--border); padding: 48px; }
+.cta-product h2 { font-size: 24px; margin-bottom: 20px; }
+.cta-points { margin-bottom: 28px; }
+.cta-points li { display: flex; gap: 10px; align-items: baseline; font-size: 14px; padding: 6px 0; }
+.cta-points li i { font-size: 12px; color: var(--text-sub); }
+.btn.primary { background: var(--text); color: #fff; border-color: var(--text); padding: 18px 32px; font-size: 14px; }
