@@ -367,7 +367,3 @@ footer { padding: 72px 0 40px; }
 .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .tags span { font-size: 11px; color: var(--text-sub); border: 1px solid var(--border); border-radius: 4px; padding: 4px 10px; }
 .sub-head { font-size: 16px; font-weight: 700; margin: 80px 0 24px; }
-
-/* 法人: 課題起点カード（見出し＝課題、本文＝IKUMの答え、タグ＝提供メニュー） */
-.card.issue h3 { font-size: 17px; font-weight: 700; line-height: 1.6; margin: 4px 0 10px; }
-.card.issue .tags { margin-top: 12px; }
