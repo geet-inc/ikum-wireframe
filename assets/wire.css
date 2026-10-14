@@ -344,4 +344,4 @@ footer { padding: 72px 0 40px; }
 
 /* Rebone: メソッド本文 */
 .method-text p { margin-bottom: 18px; }
-.method-text h3 { font-size: 18px; margin-bottom: 16px; }
+.method-text h3 { font-size: 20px; font-weight: 700; line-height: 1.6; margin-bottom: 20px; }
