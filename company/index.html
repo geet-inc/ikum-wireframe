@@ -153,71 +153,66 @@
 <section class="tight">
   <div class="container">
     <h2>メンバー</h2>
-    <p class="lead">メンバーの多くは、もともと Rebone の生徒でした。自分の身体が変わった経験があるからこそ、同じ目線で寄り添えます。</p>
-    <div class="member-group">
-      <div class="kicker">TRAINER</div>
-      <h3>トレーナー</h3>
+    <div class="member-slider" style="margin-top:40px;">
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">代表／ヘッドトレーナー</div>
+          <h3>Yori</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-yori').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">スタジオトレーナー</div>
+          <h3>Yuki</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-yuki').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">スタジオトレーナー</div>
+          <h3>Saki</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-saki').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">スタジオトレーナー</div>
+          <h3>Riyoko</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-riyoko').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">トレーナー</div>
+          <h3>Yoko</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-yoko').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">オンライン運営</div>
+          <h3>Honoka</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-honoka').showModal()">メッセージを見る</button>
+        </div>
+      </div>
+      <div class="member-card">
+        <div class="ph avatar">写真</div>
+        <div>
+          <div class="role">スタジオ運営</div>
+          <h3>Naoki</h3>
+          <button type="button" class="btn" onclick="document.getElementById('member-naoki').showModal()">メッセージを見る</button>
+        </div>
+      </div>
     </div>
-    <div class="member-slider">
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Yori</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-yori').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Yuki</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-yuki').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Saki</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-saki').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Riyoko</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-riyoko').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Yoko</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-yoko').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-    </div>
-    <div class="dots"><span class="active"></span><span></span><span></span><span></span><span></span></div>
-    <div class="member-group">
-      <div class="kicker">STAFF</div>
-      <h3>運営スタッフ</h3>
-    </div>
-    <div class="member-slider">
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Honoka</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-honoka').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-        <div class="member-card">
-          <div class="ph avatar">写真</div>
-          <div>
-            <h3>Naoki</h3>
-            <button type="button" class="btn" onclick="document.getElementById('member-naoki').showModal()">メッセージを見る</button>
-          </div>
-        </div>
-    </div>
-    <div class="dots"><span class="active"></span><span></span></div>
-    <p class="wf-memo"><i class="fa-regular fa-note-sticky"></i>制作メモ：グループごとに横スライダー（ドット送り）。「メッセージを見る」でモーダルを開き、写真・名前・担当・メッセージを表示します。メッセージ本文は仮です。</p>
+    <div class="dots"><span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="wf-memo"><i class="fa-regular fa-note-sticky"></i>制作メモ：横スライダー（ドット送り）。「メッセージを見る」でモーダルを開き、メッセージの文章のみを表示します。文章は全員分 Yori さまのものを仮で入れています。</p>
   </div>
 </section>
 
@@ -225,78 +220,71 @@
 <dialog class="member-modal" id="member-yori" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Yori</h3>
-      <div class="role">代表／ヘッドトレーナー（オンライン）</div>
-      <p>オンラインレッスンを自ら担当しています。ずっと「ご機嫌ななめ」だった私が、身体を整えることで変わりました。その経験を、ひとりでも多くの方に届けたいと思っています。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-yuki" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Yuki</h3>
-      <div class="role">トレーナー（スタジオ）</div>
-      <p>グループとパーソナルを担当しています。身体を整える楽しさを、一人ひとりに合わせてお伝えします。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-saki" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Saki</h3>
-      <div class="role">トレーナー（スタジオ）</div>
-      <p>運動が苦手だったからこそ、わかりやすく、楽しいレッスンを心がけています。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-riyoko" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Riyoko</h3>
-      <div class="role">トレーナー（スタジオ）</div>
-      <p>元ダンサーです。産後の自身の経験から、「年齢に関係なく身体は変えられる」ことを伝えています。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-yoko" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Yoko</h3>
-      <div class="role">トレーナー</div>
-      <p>3人の出産を経て Rebone に出会い、オンライン会員からトレーナーになりました。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-honoka" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Honoka</h3>
-      <div class="role">運営（オンライン）</div>
-      <p>オンラインレッスンの運営を担当しています。自身も、オンライン会員のひとりです。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 <dialog class="member-modal" id="member-naoki" onclick="if(event.target===this)this.close()">
   <div class="modal-inner">
     <form method="dialog"><button class="modal-close" aria-label="閉じる"><i class="fa-solid fa-xmark"></i></button></form>
-    <div class="ph ph-1x1"><i class="fa-regular fa-image"></i><span>写真</span></div>
-    <div>
-      <h3>Naoki</h3>
-      <div class="role">運営（スタジオ）</div>
-      <p>スタジオの運営を担当しています。縁の下の力持ちとして、ご機嫌をお届けします。</p>
-    </div>
+    <p>みなさんこんにちは。Rebone 代表の Yori です。Rebone に興味をもっていただき、ありがとうございます。</p>
+    <p>Rebone は生徒さんの声から生まれ、生徒さんとともに磨き続けてきたブランドです。最初は私一人で立ち上げたブランドでしたが、いつのまにか頼りになるトレーナー、そして心強い運営メンバーに恵まれ、それぞれの強みを活かしながら日々奮闘しています。実はそのほとんどが元々はイチ生徒で、Rebone を良いと思って、Rebone のビジョンに共感して、今一緒にそれぞれの形でご機嫌であることの大切さを伝えてくれています。</p>
+    <p>ずっと、ご機嫌ななめで生きてきた私が、身体を整える時間を持つことで身体が変わり、考え方が変わり、日々の過ごし方が変わり、今では人生が変わったといっても過言ではありません。</p>
+    <p>ご機嫌は、たくさんの可能性を秘めていると思います。もし、今、すこしでも毎日に生きづらさを感じているのであれば、自分を変えたいと思うのであれば、ぜひ Rebone でお力になれれば幸いです。</p>
+    <p>私たちはこれからも悩んでいる方がいたらそっと寄り添い、優しく背中を押す、そんな存在でいたいと思います。</p>
   </div>
 </dialog>
 
