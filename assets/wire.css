@@ -410,3 +410,6 @@ footer { padding: 72px 0 40px; }
 .post-body .toc ol ol { margin-top: 4px; }
 .post-body .toc li { font-size: 13px; }
 .post-body .toc a { text-decoration: underline; }
+
+/* 規約系（現行サイトの文言をそのまま掲載） */
+.article.legal p { margin-bottom: 16px; }
