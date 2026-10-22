@@ -413,3 +413,7 @@ footer { padding: 72px 0 40px; }
 
 /* 規約系（現行サイトの文言をそのまま掲載） */
 .article.legal p { margin-bottom: 16px; }
+
+/* 法人: 会社からのメッセージ */
+.msg-body { max-width: 760px; margin: 48px auto 0; }
+.msg-sign { margin-top: 24px; text-align: right; font-weight: 500; }
