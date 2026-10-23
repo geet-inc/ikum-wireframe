@@ -429,3 +429,24 @@ footer { padding: 72px 0 40px; }
 .faq details summary::-webkit-details-marker { display: none; }
 .faq details[open] .q i { transform: rotate(45deg); }
 .faq details .q i { transition: transform .2s; }
+
+/* 私たちについて：MVV（左に見出し、右に説明文） */
+.mvv-row { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; padding: 72px 0; border-top: 1px solid var(--border); }
+.mvv-row:last-child { border-bottom: 1px solid var(--border); }
+.mvv-row .num { font-size: 14px; font-weight: 500; letter-spacing: .08em; margin-bottom: 32px; }
+.mvv-row h3 { font-size: 30px; font-weight: 700; line-height: 1.5; margin: 0; }
+.mvv-body::before { content: ""; display: block; width: 120px; border-top: 1px solid var(--text); margin-bottom: 48px; }
+.mvv-body p { font-size: 14px; line-height: 2.1; margin: 0 0 24px; }
+.mvv-body p:last-child { margin-bottom: 0; }
+.value-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+.value-grid::before { margin-bottom: 32px; }
+.value-grid .card-box { padding: 24px; }
+.value-grid .card-box .num { font-size: 12px; margin-bottom: 8px; letter-spacing: 0; }
+.value-grid .card-box h3 { font-size: 16px; line-height: 1.6; margin-bottom: 8px; }
+.value-grid .card-box p { font-size: 13px; line-height: 1.9; margin: 0; }
+
+/* 私たちについて：社名・ロゴの由来 */
+.origin { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+.origin h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+.origin p { font-size: 14px; margin: 0 0 32px; }
+.origin p:last-child { margin-bottom: 0; }
